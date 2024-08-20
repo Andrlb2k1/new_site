@@ -4,8 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Site - Exemplo</title>
+	<link rel="stylesheet" href="css/style.css">
 	<style>
-		
+		.secao-clientes .titulo-destaque{
+			font-size: 50px;
+			color:rgb(15, 165, 28);
+		}
+
+		#titulo{
+			font-size: 120px;
+			color: red;
+		}
+
+		section h1{
+			font-size: 50px;
+			color: orange;
+		}
 	</style>
 </head>
 <body>
@@ -14,8 +28,12 @@
 	</header>
 	<main>
 		<section>
-			<h1 style="font-size: 50px;color:rgb(255, 153, 0)">Meu título</h1>
-			<p style="font-size: 50px;color:rgb(255, 153, 0)">Texto</p>
+			<h1 id="titulo-destaque">Meu título</h1>
+			<p class="titulo-destaque">Texto</p>
+		</section>
+		<section class="secao-clientes">
+			<h1 id="titulo-destaque">Cliente</h1>
+			<p class="titulo-destaque">Meu cliente</p>
 		</section>
 	</main>
 	<footer>
