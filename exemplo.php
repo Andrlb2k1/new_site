@@ -1,3 +1,3 @@
 <?php
-echo "Meuprimeiro arquivo PHP";
+echo "Meu primeiro arquivo PHP";
 ?>
