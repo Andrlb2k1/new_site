@@ -1,35 +1,22 @@
+<?php  include_once './config/config.php'; ?>
+<?php 
+  if(!isset($_SESSION['userLogged'])){
+    header("Location: login.php");
+  }
+?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Site - Exemplo</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<header>
+<html lang="pt-br">
+  
+  <?php include_once './partials/head.php'; ?>
 
-	</header>
-	<main>
-		<section>
-			<h1 id="titulo-destaque">
-				<?php echo "Meu título";?>
-				<br>
-				SOMA PHP: <?php echo 2+2;?>
-				<br>
-				SOMA HTML: 2+2
-			</h1>
-			<p class="titulo-destaque">Texto</p>
-		</section>
-		<section class="secao-clientes">
-			<h1 id="titulo-destaque">Cliente</h1>
-			<p class="titulo-destaque">Meu cliente</p>
-		</section>
-	</main>
-	<footer>
-		<div>
+  <body>    
 
-		</div>
-	</footer>
-</body>
+    <section>
+      <?php include_once './partials/menu.php'; ?>
+
+      <?php include_once './pages/routes.php'; ?>
+    </section>
+    
+    <?php include_once './partials/scripts.php'; ?>
+  </body>
 </html>
