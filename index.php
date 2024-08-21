@@ -12,7 +12,13 @@
 	</header>
 	<main>
 		<section>
-			<h1 id="titulo-destaque">Meu título</h1>
+			<h1 id="titulo-destaque">
+				<?php echo "Meu título";?>
+				<br>
+				SOMA PHP: <?php echo 2+2;?>
+				<br>
+				SOMA HTML: 2+2
+			</h1>
 			<p class="titulo-destaque">Texto</p>
 		</section>
 		<section class="secao-clientes">
