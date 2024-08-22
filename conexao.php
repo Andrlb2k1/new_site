@@ -1,7 +1,7 @@
 <?php
 
-ini_set('display_errors', 0);
-error_reporting(0);
+//ini_set('display_errors', 1);
+//error_reporting(1);
 
 $db = new mysqli("localhost", "root", "", "php_db", "3310");
 
@@ -10,4 +10,11 @@ if ($db -> connect_errno){
 	exit();
 }
 
-echo "Sem erros!";
+$select = "SELECT * FROM userss";
+$result = $db->query($select);
+
+if($result){
+	echo "Não tem erro!";
+}else{
+	echo "Erro no SELECT: {$db->error}";
+}
