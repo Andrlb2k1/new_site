@@ -10,7 +10,7 @@ if ($db -> connect_errno){
 	exit();
 }
 
-$select = "SELECT * FROM userss";
+$select = "SELECT * FROM users";
 $result = $db->query($select);
 
 if($result){
