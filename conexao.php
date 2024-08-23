@@ -14,7 +14,15 @@ $select = "SELECT * FROM users";
 $result = $db->query($select);
 
 if($result){
-	echo "Não tem erro!";
+	while($obj = $result->fetch_object()){
+		echo "ID: {$obj->id} <br>";
+		echo "Nome: {$obj->name} <br>";
+		echo "Email: {$obj->email} <br>";
+		echo "Registrado em: {$obj->created_at} <br>";
+		echo "<hr>";
+	}
 }else{
 	echo "Erro no SELECT: {$db->error}";
 }
+
+$db->close();
