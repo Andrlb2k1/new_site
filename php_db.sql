@@ -7,12 +7,12 @@ INSERT INTO `php_db`.`users` (
 VALUES
   (
     'André Bristot',
-    'andre.lb865854@gmail.com',
+    'andre.lb845854@gmail.com',
     MD5('12345679'),
     '2022-11-12 13:00:02'
   );
   
-SELECT * FROM users WHERE email = 'andre.lb865854@gmail.com'
+  SELECT * FROM users WHERE email = 'andre.lb865854@gmail.com'
   
 UPDATE
   `php_db`.`users`
@@ -25,7 +25,7 @@ WHERE `email` = 'andre.lb865854@gmail.com';
 DELETE
 FROM
   `php_db`.`users`
-WHERE `id` = '4';
+WHERE `id` = '5';
 
 UPDATE
   `php_db`.`users`
