@@ -3,7 +3,7 @@
 //ini_set('display_errors', 1);
 //error_reporting(1);
 
-$db = new mysqli("localhost", "root", "", "php_db", "3310");
+$db = new mysqli("localhost", "root", "PostGreen2k22.", "php_db", "3307");
 
 if ($db -> connect_errno){
 	echo "Erro no banco de dados: {$db->connect_error}";
