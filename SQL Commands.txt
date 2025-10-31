@@ -1,0 +1,72 @@
+CREATE TABLE `php_db`.`users` (
+  `id` INT (11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR (200) NOT NULL,
+  `email` VARCHAR (200) NOT NULL,
+  `password` VARCHAR (200) NOT NULL,
+  `birthday` DATE,
+  `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP(),
+  `updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP(),
+  `deleted_at` DATETIME,
+  PRIMARY KEY (`id`)
+) ENGINE = INNODB CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
+
+Alter table `php_db`.`users`   
+  add  UNIQUE index `email_unique` (`email`)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO `php_db`.`users` (
+  `name`,
+  `email`,
+  `password`,
+  `birthday`
+)
+VALUES
+  (
+    'André Bristot',
+    'andre.lb865854@gmail.com',
+    MD5('12345678'),
+    '2024-11-12'
+  );
+
+ SELECT * FROM users
+  WHERE email = 'andre.lb865854@gmail.com'
+  AND deleted_at IS NOT NULL;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO `php_db`.`users` (
+  `name`,
+  `email`,
+  `password`,
+  `deleted_at`
+)
+VALUES
+  (
+    'André Bristot',
+    'andre.lb845854@gmail.com',
+    MD5('12345679'),
+    '2022-11-12 13:00:02'
+  );
+  
+  SELECT * FROM users WHERE email = 'andre.lb865854@gmail.com'
+
+UPDATE
+  `php_db`.`users`
+SET
+  `name` = 'Voltou p/ ativo',
+  `password` = MD5('13579'),
+  `deleted_at` = NULL
+WHERE `email` = 'andre.lb865854@gmail.com';
+
+DELETE
+FROM
+  `php_db`.`users`
+WHERE `id` = '5';
+
+UPDATE
+  `php_db`.`users`
+SET
+  `deleted_at` = NOW()
+WHERE `email` = 'andre.lb865854@gmail.com';
+

@@ -1,0 +1,65 @@
+https://github.com/Andrlb2k1/Sistema-de-cadastro
+
+git init
+
+------------------------------------------------------------------------------------------
+
+- git clone https://github.com/Andrlb2k1/Sistema-de-cadastro.git = clona o código de um repositório
+
+- cd Sistema-de-cadastro = acessa determinado diretório
+
+- ls = mostra os arquivos do diretório
+
+- git add . = adiciona novos arquivos de fato ao código
+
+- git log = mostra os commit em detalhes
+
+- git log --oneline = mostra os commits e seus códigos hash
+
+- git restore --source <hash> . = restaura o código para um commit anterior (necessita de um novo commit para ser validado)
+
+-- git pull https://github.com/Andrlb2k1/Sistema-de-cadastro.git = atualiza o código a partir daquele presente no repositório
+
+- git pull
+
+- git status = mostra o status do código
+
+-- git commit . -m "<mensagem>" = valida e rotula as alterações em determinados arquivos
+
+-- git push origin main
+
+- git push
+
+- git push origin <nome da branch> = posta o código com as novas alterações no repositório, em determinada branch
+
+- git checkout -b <nome da branch> = cria uma branch
+
+- git checkout <nome da branch> = acessa determinada branch
+
+- git switch <nome da branch> = troca de branch
+
+- git branch = visualiza as branchs existentes no repositório
+
+- git merge <nome da branch alternativa>; git push origin <nome da branch atual> = "mistura" os códigos de duas branchs
+
+- git branch -d <nome da branch> = apaga determinada branch localmente
+
+- git push origin --delete <nome da branch> = apaga determinada branch permanentemente
+
+- git stash
+
+------------------------------------------------------------------------------------------
+
+git branch teste
+
+git checkout -b teste
+
+git status
+
+git add .
+
+git commit -m <descrição>
+
+git remote add origin https://github.com/Andrlb2k1/Sistema-de-cadastro.git
+
+git push -1 origin teste
